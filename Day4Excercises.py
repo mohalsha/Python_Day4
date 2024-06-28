@@ -1,6 +1,6 @@
 #Excercise 1
 
-"""class Car():
+class Car():
     car_count = 0
 
     def __init__(self, color, brand, year, price):
@@ -21,11 +21,11 @@ car1 = Car("red", "Mitsubishi", 1997, 2800)
 print(Car.car_count)
 print(car1)
 
-print(car1.car_info)"""
+print(car1.car_info)
 
 #Excercise 2
 
-"""class BankAccount():
+class BankAccount():
     interest_rate = 0.05
 
     def __init__(self, name, balance=0):
@@ -50,7 +50,7 @@ print(car1.car_info)"""
         print(self.balance)
     
     def calculate_annual_interest(self):
-        return self.balance * self.interest_rate """
+        return self.balance * self.interest_rate
 
 #Excercise 3
 
@@ -84,6 +84,43 @@ class Person():
     def name(self, age):
         self.__age = age
 
+#Excercise 4
+
+class Employee():
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+class Manager():
+    def __init__(self, department):
+        self.department = department
+
+class Executive(Employee,Manager):
+    def __init__(self, company_car, bonus):
+        self.company_car = company_car
+        self.bonus = bonus
+    
+    def __str__(self):
+        print("The Executive name is {self.name} and their salary is {self.salary} USD, they work in the {self.department} department, and they are using company car {self.company_car}. they are entitled to a bonus of {self.bonus} ")
+
+#Excercise 5
+#I created the class with a lower case "p" at the start becuase we already have a class called "Person"
+
+class person():
+    def _init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def set_name(self, name):
+        self.name = name
+        return self.name
+    
+    def set_age(self, age):
+        self.age = age
+        return age
+    
+    def get_person_info(self):
+        print("This is {self.name}, and they are {self.age} years old")
     
 
 
